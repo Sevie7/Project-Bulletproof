@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <header>
+        Bulletproof Blog
+    </header>
+    <div class="container">
+        <div class="content">
+            <h2>Welcome to the Official Bulletproof Website!</h2>
+            <p><strong>Date:</strong> February 4, 2025</p>
+            <p><strong>Author:</strong> [Your Name]</p>
+            <p>Hello, Bulletproof fans!</p>
+            <p>Welcome to the first-ever blog post about our game. We are incredibly excited to share this journey with you and keep you updated on all the exciting developments. In this blog, we will regularly post updates, tips, and community stories. Let's get started!</p>
+            
+            <h3>Developer Diary: The Journey So Far</h3>
+            <ul>
+                <li><strong>Inspiration:</strong> I was often bored at home and decided to create a game. That’s how Bulletproof was born—an intense and thrilling FPS where you must eliminate as many enemies as possible.</li>
+                <li><strong>Getting Started:</strong> I began with a simple FPS template on Roblox and expanded it as I learned more. My goal was to create a realistic and immersive experience.</li>
+                <li><strong>Challenges:</strong> The biggest challenges were the arms and the map. Testing was also an intense process, but it was essential to make the game as exciting as possible.</li>
+                <li><strong>Time:</strong> It took WAY TOO LONG to develop everything, but it was worth it!</li>
+            </ul>
+            
+            <h3>About Bulletproof</h3>
+            <p><strong>Game Objective:</strong> Try to eliminate as many enemies as possible in an intense and heart-pounding environment.</p>
+            <p><strong>Unique Features:</strong> Game passes give you access to exclusive weapons and gear. You can also purchase new, powerful weapons to dominate your enemies.</p>
+            <p><strong>Theme:</strong> Realistic and eerie, with dark, grim environments that keep you on the edge of your seat.</p>
+            
+            <h3>Future Plans</h3>
+            <p><strong>Upcoming Updates:</strong> We plan to add more weapons, a larger map, and more realistic and spooky elements.</p>
+            <p><strong>New Features:</strong> Possible new movements like sneaking and climbing to heighten the tension.</p>
+            <p><strong>Feedback:</strong> I check the feedback every day after school and pick the best ideas to improve the game.</p>
+            
+            <h3>Personal Experiences</h3>
+            <p><strong>Favorite Memory:</strong> The moment the game finally worked after fixing a bug for 8 days. It was a huge relief and an incredible achievement.</p>
+            <p><strong>Developer Tips:</strong> You need time and patience. It's a long process, but the reward is worth it. Stay focused and don’t give up.</p>
+            <p><strong>Motivation:</strong> Seeing people play and enjoy the game motivates me to keep going.</p>
+            
+            <p>Thank you for reading our first blog post! We hope you’re as excited about Bulletproof’s future as we are. Stay tuned for more updates and stories. Until next time!</p>
+            
+            <p><strong>- The Bulletproof Team</strong></p>
+            
+            <a href="https://www.roblox.com/games/131265777804316/Bulletproof" class="play-link" target="_blank">Play Bulletproof Now!</a>
+        </div>
+    </div>
+</body>
+</html>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulletproof Blog</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #1f1f1f;
+            color: #77aaff;
+            text-align: center;
+            padding: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            border-bottom: 4px solid #77aaff;
+        }
+        .content {
+            background: #1e1e1e;
+            padding: 30px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+        h2, h3 {
+            color: #77aaff;
+        }
+        p, li {
+            color: #b0b0b0;
+        }
+        .play-link {
+            display: block;
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            background: #77aaff;
+            color: #121212;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .play-link:hover {
+            background: #5599dd;
+        }
+        .comments-section {
+            margin-top: 40px;
+        }
+        .comment {
+            background: #2a2a2a;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-left: 4px solid #77aaff;
+            border-radius: 5px;
+            position: relative;
+        }
+        .comment button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            display: none;
+        }
+        .comment.own-comment button {
+            display: block;
+        }
+        .comment-form input, .comment-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            background: #2a2a2a;
+            border: 1px solid #77aaff;
+            color: #e0e0e0;
+            border-radius: 5px;
+        }
+        .comment-form button {
+            padding: 10px 20px;
+            background: #77aaff;
+            color: #121212;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .comment-form button:hover {
+            background: #5599dd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Bulletproof Blog
+    </header>
+    <div class="container">
+        <div class="comments-section">
+            <h3>Comments</h3>
+            <div id="comments"></div>
+            <div class="comment-form">
+                <input type="text" id="commentAuthor" placeholder="Your name...">
+                <textarea id="commentText" placeholder="Write a comment..."></textarea>
+                <button onclick="addComment()">Post Comment</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComments();
+        });
+
+        function loadComments() {
+            const comments = JSON.parse(localStorage.getItem('comments')) || [];
+            const commentsDiv = document.getElementById('comments');
+            commentsDiv.innerHTML = '';
+            const currentUser = localStorage.getItem('currentUser') || "Anonymous";
+            comments.forEach((comment, index) => {
+                const commentElement = document.createElement('div');
+                commentElement.classList.add('comment');
+                if (comment.author === currentUser) {
+                    commentElement.classList.add('own-comment');
+                }
+                commentElement.innerHTML = `<h4>${comment.author}</h4><p>${comment.text}</p>`;
+                if (comment.author === currentUser) {
+                    const deleteButton = document.createElement('button');
+                    deleteButton.innerText = 'Delete';
+                    deleteButton.onclick = () => deleteComment(index);
+                    commentElement.appendChild(deleteButton);
+                }
+                commentsDiv.appendChild(commentElement);
+            });
+        }
+
+        function addComment() {
+            const commentAuthor = document.getElementById('commentAuthor').value;
+            const commentText = document.getElementById('commentText').value;
+            if (commentAuthor.trim() === '' || commentText.trim() === '') return;
+            localStorage.setItem('currentUser', commentAuthor);
+            const comments = JSON.parse(localStorage.getItem('comments')) || [];
+            const newComment = { author: commentAuthor, text: commentText };
+            comments.push(newComment);
+            localStorage.setItem('comments', JSON.stringify(comments));
+            document.getElementById('commentAuthor').value = '';
+            document.getElementById('commentText').value = '';
+            loadComments();
+        }
+
+        function deleteComment(index) {
+            const comments = JSON.parse(localStorage.getItem('comments')) || [];
+            comments.splice(index, 1);
+            localStorage.setItem('comments', JSON.stringify(comments));
+            loadComments();
+        }
+    </script>
+</body>
+</html>
